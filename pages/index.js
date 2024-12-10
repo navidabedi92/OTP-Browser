@@ -30,11 +30,10 @@ const Index = () => {
   }
   const sendSms = () => {
     const message = "Your code is: 12345 @form.greendataware.com #12345";
-    const mobile = "09036660463";
+    const mobile = "";
 
     const encodedMessage = encodeURIComponent(message); // Encode special characters
-    const url = `https://api.greendataware.com/api/greenweb/SendGreenSms?Message=${encodedMessage}&Mobile=${mobile}`;
-
+    
     axios
       .get(url)
       .then((response) => {
